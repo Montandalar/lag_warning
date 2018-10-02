@@ -55,7 +55,7 @@ minetest.register_globalstep(function(dtime)
 	if timer < 5 then return end
 	timer=0
 
-	if generated_count > 0 then
+	if generated_count > 0 and max_lag > 1 then
 		local lag = tonumber(get_max_lag())
 
 		minetest.chat_send_all("# Server-Message #: Mapgen is at work right now, prepare for some lag (" ..
