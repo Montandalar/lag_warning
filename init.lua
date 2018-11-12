@@ -59,8 +59,8 @@ minetest.register_globalstep(function(dtime)
 		local lag = tonumber(get_max_lag())
 
 		minetest.chat_send_all("# Server-Message #: Mapgen is at work right now, prepare for some lag (" ..
-			"Current: " .. lag .. "s, " ..
-			"Max: " .. max_lag .. "s, " ..
+			"Current: " .. math.floor(lag*10)/10 .. "s, " ..
+			"Max: " .. math.floor(max_lag*10)/10 .. "s, " ..
 			"Chunks: " .. generated_count .. ")")
 	end
 
