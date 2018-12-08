@@ -42,6 +42,7 @@ generated_count = 0
 
 minetest.register_on_generated(function(minp, maxp, seed)
 	generated_count = generated_count + 1
+	minetest.log("action", "[mapgen] Generating chunk @ " .. minetest.pos_to_string(minp) .. " - " .. minetest.pos_to_string(maxp))
 end)
 
 
